@@ -1,0 +1,48 @@
+@import "./Variables.scss";
+@import "./Header.scss";
+@import "./Category.scss";
+@import "./Item.scss";
+@import "./Items.scss";
+@import "./cartTable.scss";
+@import "./details.scss";
+@import "./carousel.scss";
+@import "./loading.scss";
+@import "./Services.scss";
+@import "./Footer.scss";
+@import "./addCart.scss";
+@import "./Search.scss";
+@import "./swiper.scss";
+@import "./mainContainer.scss";
+@import "./Clock.scss";
+@import "./poster.scss";
+@import "~bootstrap/scss/bootstrap";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    
+
+}
+body {
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+  }
+  
+
+
+
+a {
+    text-decoration: none !important;
+}
+

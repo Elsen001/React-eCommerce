@@ -1,0 +1,52 @@
+
+.poster{
+    height: 500px;
+    div{
+        height: 500px;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        .title{
+            width: 430px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 200px;
+            h2{
+                font-weight: 700;
+            }
+            *{
+                padding: 10px 0;
+            }
+            a{
+                display: inline-block;
+                text-align: center;
+                width: 40%;
+                padding: 10px 30px;
+                background-color: white;
+                color: black;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:700px) {
+    .poster{
+        div{
+            display: flex;
+            justify-content: center;
+            .title{
+                margin-left: 0;
+                a{
+                    width: 80%;
+                    margin: 0 auto;
+                }
+                *{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

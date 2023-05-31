@@ -1,0 +1,123 @@
+.details-container {
+    min-height: 500px;
+}
+
+.details {
+    width: 90%;
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .details-img-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 600px;
+
+        img {
+            width: 300px;
+            height: 400px;
+
+        }
+
+        .alternate-img {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px 0;
+
+            img {
+                width: 100px;
+                height: 100px;
+                margin: 5px;
+                transition: .5s;
+                cursor: pointer;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+
+
+
+
+    .description {
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+
+        &:first-child,
+        :nth-child(2) {
+            color: black;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        h3 {
+            color: black;
+            font-weight: bold;
+        }
+
+        span {
+            font-size: 17px;
+            padding: 0 20px;
+            margin-top: 0 20px;
+        }
+
+        p {
+            border-top: 1px solid gray;
+
+        }
+
+        * {
+            padding: 20px;
+        }
+
+        .add-to-cart {
+            text-align: right;
+
+            button {
+                @include btn
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width:1110px) {
+    .details {
+        justify-content: center;
+
+    }
+}
+
+@media screen and (max-width:530px) {
+    .details {
+        .description {
+            align-items: center;
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    .details{
+        .description{
+            .toCart {
+                justify-content: space-between;
+                flex-wrap: wrap;
+                button {
+                    margin: 5px 0;
+                    order: 3;
+                    width: 100%;
+                    font-size: 14px !important;
+                }
+            }
+        }
+    }
+   
+}

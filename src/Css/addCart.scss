@@ -1,0 +1,24 @@
+.toCart {
+    display: flex;
+    align-items: center;
+    * {
+        height: 50px;
+        margin: 0 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button {
+        background-color: #000;
+        font-size: 17 !important;
+        color: white !important;
+
+    }
+
+    i {
+        border: 1px solid gray;
+        cursor: pointer;
+    }
+}
+
