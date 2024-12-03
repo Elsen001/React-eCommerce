@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { getItemsFetch, setLimit } from '../redux/itemSlice'
@@ -18,15 +18,15 @@ const Items = () => {
 
     useEffect(() => {
         dispatch(getItemsFetch())
-        console.log(items)
+        console.log(visibleProducts)
     }, [])
     return (
         <main>
             <h2>Our Trendy Products</h2>
 
             {
-                loading ? <Loading /> : visibleProducts && visibleProducts.map((item, key) => (
-                    <Link to={`/details/${item.id}`} key={key}>
+                loading ? <Loading /> : visibleProducts && visibleProducts.map((item) => (
+                    <Link to={`/details/${item.id}`} key={item.id}>
                         <article >
                             <img src={item.thumbnail} alt={item.brand} />
                             <div className='price'>

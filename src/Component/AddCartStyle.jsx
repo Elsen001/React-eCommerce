@@ -14,7 +14,6 @@ const AddCartStyle = ({item}) => {
         <div className="toCart">
             <i style={{backgroundColor:likeColor}} onClick={()=>dispatch(addLike(item))} className="fa-regular fa-heart"></i>
             <button onClick={() => dispatch(addToCart(item))}>ADD TO CART</button>
-            <i className="fa-solid fa-magnifying-glass"></i>
         </div>
     )
 }

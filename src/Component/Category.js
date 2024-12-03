@@ -7,13 +7,9 @@ import MainContainer from './MainContainer';
 
 const Category = () => {
     const dispatch = useDispatch();
-    const category = useSelector((state) => state.category);
-    const itemsLength = category.category;
-    const cateSlice = itemsLength.slice(0, 11);
+    const category = useSelector((state) => state.category.category);
+    const cateSlice = category.slice(0, 11);
     const [show, setShow] = useState(false);
-
-
-
 
     const showCategory = () => {
         if (show === "block") {
@@ -31,11 +27,11 @@ const Category = () => {
     return (
         <div className='items'>
             <div className="section-items1">
-                <button onClick={showCategory}><i class="fa-solid fa-bars-staggered"></i>CATEGORIES</button>
+                <button onClick={showCategory}><i className="fa-solid fa-bars-staggered"></i>CATEGORIES</button>
                 {
-                    itemsLength && cateSlice.map((item, key) => (
-                        <Link key={key} style={{ display: show }} to={`/category/${item}`}>
-                            {item.toUpperCase()}
+                    cateSlice?.map((item,index) => (
+                        <Link  key={index} style={{ display: show}} to={`/category/${item.name}`}>
+                            {item.name} 
                         </Link>
                     ))
                 }

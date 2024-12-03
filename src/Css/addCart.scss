@@ -17,8 +17,13 @@
     }
 
     i {
-        border: 1px solid gray;
         cursor: pointer;
+        
+        &:hover{
+            background-color: red;
+            color: white;
+
+        }
     }
 }
 

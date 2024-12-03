@@ -1,7 +1,6 @@
 import React from 'react'
 import logo from "../img/download2.jpg"
 import { Link } from 'react-router-dom'
-import Clock from './Clock'
 
 const MainContainer = () => {
     return (

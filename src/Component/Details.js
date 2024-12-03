@@ -12,10 +12,12 @@ const Details = () => {
     const item = useSelector(state => state.itemDetails.item);
     const loading = useSelector(state => state.itemDetails.loading);
     const [selectedImage, setSelectedImage] = useState(null);
- 
+
 
     const dispatch = useDispatch();
     const { id } = useParams();
+
+  
 
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -40,10 +42,10 @@ const Details = () => {
             ) : item ? (
                 <div className='details'>
                     <div className='details-img-container'>
-                            {selectedImage && (
-                                <img src={selectedImage} alt="" />
-                               
-                            )}
+                        {selectedImage && (
+                            <img src={selectedImage} alt="" />
+
+                        )}
                         <div className="alternate-img">
                             {item.images.map((img, index) => (
                                 <img

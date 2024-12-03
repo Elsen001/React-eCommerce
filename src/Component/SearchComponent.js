@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { searchItems } from '../redux/SearchSlice'
-import MainContainer from './MainContainer'
 import SearchComponentKeyup from './SearchComponentKeyup'
 import { useEffect } from 'react'
 

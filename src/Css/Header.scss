@@ -3,10 +3,19 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000;
+    z-index: 20;
+    color: white;
+    
 
     img {
         width: 150px;
+        transform: rotate(-25deg);
+        background-color: #fff;
+        margin-top: 25px;
     }
 
     ul {
@@ -19,7 +28,7 @@ header {
             padding-left: 40px;
 
             a {
-                color: #000;
+                color: white;
                 font-size: 28px;
                 font-family: 'Caveat', cursive;
             }
@@ -28,9 +37,11 @@ header {
 
     .icon {
         i {
-            color: black;
+            color: white;
             font-size: 30px;
             margin: 0 10px;
+           
+
         }
 
         .animateCart {
@@ -52,8 +63,8 @@ header {
                 position: absolute;
                 top: -25px;
                 right: -2px;
-                color: #fff;
-                background-color: #000;
+                color: #000;
+                background-color: white;
                 border-radius: 50%;
                 width: 25px;
                 height: 25px;
@@ -77,7 +88,7 @@ header {
 
         span {
             width: 100%;
-            background-color: #000;
+            background-color: white;
             height: 5px;
             margin: 3px;
             transition: 1s;

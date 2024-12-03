@@ -3,6 +3,10 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   min-height: 400px;
+  background-color: #000;
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+  margin-top: 150px;
   
   * {
     border: none;
@@ -24,19 +28,20 @@ main {
     width: 300px;
     min-height: 370px;
     margin: 15px;
-    border: 1px solid $color-btn-category;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     z-index: 3;
+    box-shadow: 1px 2px 31px 5px rgba(255,255,255,0.75);
+    &:hover{box-shadow: 1px 2px 57px 5px rgba(255,255,255,0.75);}
     .fa-heart{
       position: absolute;
       top: 0;
       right: 0;
       margin: 0;
-      border-radius: 100px;
+      padding: 10px;
       &:hover{
         background-color: red !important;
         border-radius: 50%;
@@ -48,15 +53,10 @@ main {
 
     .toCart {
       width: 100%;
-
-      button {
-        width: 80%;
-        order: 3;
-      }
-
+    
+    
       i {
         width: 20%;
-        background-color: black;
         border: none;
         color: #fff;
 
@@ -97,7 +97,11 @@ main {
     img {
       width: 100%;
       height: 250px;
-
+      background-color: #000;
+      transition: 500ms;
+      &:hover{
+        transform: translateY(-10px);
+      }
 
     }
   }
@@ -115,8 +119,5 @@ main {
     }
   }
 
-  article:hover img {
-    transform: scale(1.1);
-    transition: 500ms;
-  }
+  
 }

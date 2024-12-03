@@ -17,7 +17,7 @@ const DetailsBack = ({item}) => {
     //   };
       
     return (
-        <div className='title-img'>
+        <div className='title-img' style={{marginTop:"150px"}}>
             <img src={bg_logo} alt="" />
             <h2>Shop</h2>
             <p className='params'>

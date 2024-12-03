@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { Link, NavLink } from 'react-router-dom'
 import logo from "../img/logo.png"
 
 
 
 const Header = () => {
-  const dispatch = useDispatch()
   const total = useSelector((state) => state.cart.cart.length)
   const searchItem = useSelector(state => state.search.item)
   const totalPrice = useSelector(state => state.cart.cartTotal);
@@ -52,9 +51,8 @@ const Header = () => {
 
           </nav>
           <div className="icon">
-            <i className="fa-regular fa-user"></i>
             <Link to="/like"><i className="fa-regular fa-heart"></i><span>{likes.length}</span></Link>
-            <Link to="/cart"><i className={`fa-solid fa-cart-shopping ${classNameCart}`} ></i><span className={`${classNameCart}`}>{total}</span></Link><span className='totalPrice'>${totalPrice > 0 ? totalPrice + ".00" : priceFormat}</span>
+            <Link to="/cart"><i className={`fa-solid fa-cart-shopping ${classNameCart}`} ></i><span className={`${classNameCart}`}>{total}</span></Link><span className='totalPrice'>${totalPrice > 0 ? totalPrice.toFixed(2) :priceFormat}</span>
           </div>
 
       </header>

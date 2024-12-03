@@ -3,6 +3,7 @@
     width: 90%;
     margin: 0 auto;
     justify-content: space-between;
+    margin-top: 150px;
     
 
     .section-items1 {
@@ -26,13 +27,14 @@
         }
 
         a {
-            background-color: #F9F9F9;
             color: rgb(35, 35, 35);
-            border-bottom: 1px solid #e0e0e0;
             font-size: 15px;
-            padding: 10px 40px;
+            padding: 10px 0;
             font-family: sans-serif;
-            
+            transition: 500ms;
+          &:hover{
+            padding-left: 20px;
+          }
 
             &:hover {
                 background-color: #d7d7d7;

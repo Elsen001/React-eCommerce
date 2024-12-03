@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const Countdown = () => {
-  const [remainingTime, setRemainingTime] = useState(3 * 24 * 60 * 60); // 3 günün saniye cinsinden karşılığı
+  const [remainingTime, setRemainingTime] = useState(3 * 24 * 60 * 60); 
 
   useEffect(() => {
     const timer = setInterval(() => {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Services from '../Component/Services';
 import Footer from '../Component/Footer';
 import Poster from '../Component/Poster';
@@ -17,16 +17,16 @@ const Page = () => {
         <BrowserRouter>
             <Header />
             <Routes>
-                <Route path='/' exact element={<> <Category />  <Services /> <Items /> <Poster /> </>} />
-                <Route path='/category/:name' element={<><CategoryItems /> </>} />
+                <Route  path='/' element={<><Category /> <Services /> <Items /> <Poster /></>} />
+                <Route path='/category/:name' element={<CategoryItems />} />
                 <Route path='/cart' element={<Cart />} />
-                <Route path="/details/:id" element={<Details />} />
+                <Route path='/details/:id' element={<Details />} />
                 <Route path='/search' element={<Search />} />
                 <Route path='/like' element={<LikePage />} />
             </Routes>
             <Footer />
         </BrowserRouter>
-    )
+    );
 }
 
-export default Page
+export default Page;

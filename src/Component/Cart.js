@@ -40,7 +40,7 @@ const Cart = () => {
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td>Total Price {totalPrice} $</td>
+                            <td>Total Price {totalPrice.toFixed(2)} $</td>
                         </tr>
                     </tfoot>
                 </table>
@@ -49,8 +49,8 @@ const Cart = () => {
                 cart.length>0 && <div className="cartCheckout">
                 <div className="content">
                     <h4>Cart totals</h4>
-                    <p><span>Subtotal</span><span>$ {totalPrice}</span></p>
-                    <p><span>Total</span><span>$ {totalPrice}</span></p>
+                    <p><span>Subtotal</span><span>$ {totalPrice.toFixed(2)}</span></p>
+                    <p><span>Total</span><span>$ {totalPrice.toFixed(2)}</span></p>
                     <button>PROCEED TO CHECKOUT <i class="fa-solid fa-circle-arrow-right"></i></button>
                 </div>
             </div>

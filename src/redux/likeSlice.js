@@ -10,7 +10,7 @@ const likeSlice = createSlice({
     initialState,
     reducers: {
       addLike: (state, action) => {
-        const { id, title, price, images } = action.payload;
+        const { id } = action.payload;
         const existingIndex = state.likes.findIndex((item) => item.id === id);
         if (existingIndex !== -1) {
           state.likes.splice(existingIndex, 1);

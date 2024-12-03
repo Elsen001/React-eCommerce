@@ -5,16 +5,8 @@ import { Link } from 'react-router-dom'
 
 const CategoryPageData = () => {
     const dispatch = useDispatch()
-    const category = useSelector((state) => state.category)
-    const itemsLenght = category.category;
+    const category = useSelector((state) => state.category.category)
     
-    // const capitalizeWords = (str) => {
-    //     return str
-    //         .toLowerCase()
-    //         .split(' ')
-    //         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    //         .join(' ');
-    // };
 
     useEffect(() => {
         dispatch(fetchCategory())
@@ -23,10 +15,8 @@ const CategoryPageData = () => {
         <div className='categoryItemData'>
             <h4>Categories</h4>
             {
-               itemsLenght && itemsLenght.map((item,key)=>(
-                <>
-                    <Link  to={`/category/${item}`} key={key}>{item} <span>({item.length})</span></Link> 
-                </>
+               category && category.map((item)=>(
+                    <Link  to={`/category/${item}`} key={item.name} >{item} <span>({item.length})</span></Link> 
                 ))
             }
         </div>
